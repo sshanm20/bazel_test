@@ -5,19 +5,19 @@ pipeline {
         
         stage ('Verify Bazel') {
             steps {
-                sh 'bazel --version'
+                sh 'usr/local/bin/bazel --version'
             }
         }
 
         stage ('Build project') {
             steps {
-                sh 'bazel build //:hello-world'
+                sh 'usr/local/bin/bazel build //:hello-world'
             }
         }
 
         stage ('Generate dep.graph') {
             steps {
-                sh 'bazel query --noimplicit_deps "deps(//:hello-world)" --output graph'
+                sh 'usr/local/bin/bazel query --noimplicit_deps "deps(//:hello-world)" --output graph'
             }
         }
     }
