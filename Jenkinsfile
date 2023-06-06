@@ -3,10 +3,9 @@ pipeline {
 
     stages {
         
-        stage ('Verify Bazel & GCC') {
+        stage ('Verify Bazel') {
             steps {
                 sh '/usr/local/bin/bazel --version'
-                sh '/usr/bin/java --version'
             }
         }
 
