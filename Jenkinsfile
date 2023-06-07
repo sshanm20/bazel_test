@@ -8,6 +8,7 @@ pipeline {
                 sh '/usr/local/bin/bazel --version'
                 sh 'echo $PATH'
                 sh 'echo $USER'
+                sh 'echo %OS%
             }
         }
 
