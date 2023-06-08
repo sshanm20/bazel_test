@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh '/usr/local/bin/bazel --version'
                 sh 'echo $PATH'
+                sh 'printenv'
             }
         }
 
