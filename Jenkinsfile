@@ -1,8 +1,9 @@
 pipeline {
     agent any
 
-    stages {
-        
+    environment {
+        PATH = "/usr/local/bin/:$PATH"
+    }  
         stage ('Verify Bazel') {
             steps {
                 sh '/usr/local/bin/bazel --version'
