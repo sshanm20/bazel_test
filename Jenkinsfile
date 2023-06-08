@@ -5,7 +5,7 @@ pipeline {
         
         stage ('Verify Bazel') {
             steps {
-                sh 'bazel --version'
+                sh 'usr/local/bin/bazel --version'
             }
         }
 
