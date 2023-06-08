@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Verify Bazel') {
             steps {
-                sh '/usr/local/bin/bazel --version'
+                sh 'bazel --version'
                 sh 'echo $PATH'
                 sh 'printenv'
             }
