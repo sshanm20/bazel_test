@@ -1,0 +1,23 @@
+# file: //.bazelrc
+# Enable toolchain resolution with cc
+build --incompatible_enable_cc_toolchain_resolution
+build --incompatible_sandbox_hermetic_tmp=True
+build --action_env=GHS_LMPORT=2010
+build --action_env=GHS_LMWHICH=GHS
+build --action_env=GHS_LMHOST=@glcpd422.vistcorp.ad.visteon.com
+--host_jvm_args=-javaagent:$(BAZEL)/third_party/allocation_instrumenter/java-allocation-instrumenter-3.3.0.jar 
+--host_jvm_args=-DRULE_MEMORY_TRACKER=1
+# ##### Define bl-build
+# build --define=BRS_COMP_GHS=yes
+# build --define=BRS_CPU_CORE_CORTEX_M4=set
+# build --define=BRS_DERIVATIVE_IMX8QXP=set
+# build --define=BRS_OS_USECASE_OS=notset
+# build --define=BRS_PROGRAM_CODE_LOCATION_RAM=set
+# build --define=BRS_VECTOR_TABLE_LOCATION_RAM=set
+# build --define=DEBUG_ASSERT_ON=set
+# build --define=DemoFbl=set
+# build --define=IOHWAB_TASK_TEST_ENABLE=set
+# build --define=SEC_KEY_USED=1
+# build --define=VCONST=const
+# build --define=NDEBUG=set
+####### bl-build 
